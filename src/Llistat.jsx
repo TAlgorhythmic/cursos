@@ -41,8 +41,8 @@ function Llistat() {
 
                 {cursos.map((c) => {
                     return (
-                        <li key={c.id} >
-                            <Link to={"/curso/" + c.id} >{c.title}</Link>
+                        <li key={c.Id} >
+                            <Link to={"/curso/" + c.Id} >{c.title}</Link>
                         </li>
                     )
                 })}

@@ -30,8 +30,7 @@ class Controller {
         }
         const response = await fetch(BASEURL + "/" + id, request);
         const data = await response.json();
-        const finalIObj = new Curso(data.Id, data.title, data.description, data.price, data.img, data.rating);
-        return finalIObj;
+        return data.list;
     }
     
     async update(curso) {
