@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Controller from "./Controler/controller.js"; 
+import Controller from "./Controler/controller.js";
 import { useEffect, useState } from "react";
 
 
@@ -28,25 +28,27 @@ function Llistat() {
     if (cursos.length == 0) {
         return (
             <>
-                <h1>No hi ha cursos</h1>
+                <span className="loading" />
             </>
         )
     }
 
     return (
         <>
-            <h1>Llista de cursos</h1>
+            <div className="fade-in">
+                <h1>Llista de cursos</h1>
 
-            <ul>
+                <ul>
 
-                {cursos.map((c) => {
-                    return (
-                        <li key={c.Id} >
-                            <Link to={"/curso/" + c.Id} >{c.title}</Link>
-                        </li>
-                    )
-                })}
-            </ul>
+                    {cursos.map((c) => {
+                        return (
+                            <li key={c.Id} >
+                                <Link to={"/curso/" + c.Id} >{c.title}</Link>
+                            </li>
+                        )
+                    })}
+                </ul>
+            </div>
 
 
         </>

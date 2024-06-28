@@ -4,34 +4,39 @@ import Controller from "./Controler/controller";
 
 export default function Create() {
 
-    const [isValid, setValid] = useState([true, ""]);
+    const [isValid, setValid] = useState(true);
+    const [text, setText] = useState("");
 
-    async function submit() {
+    function submit() {
         const title = document.getElementById("title").value;
         const description = document.getElementById("description").value;
         const price = parseFloat(document.getElementById("price").value);
         const img = document.getElementById("img").value;
-        const rating = document.getElementById("rating").value;
+        const rating = parseInt(document.getElementById("rating").value);
 
-        if (title.length > 50) {
+        if (title.length > 32) {
             console.log("fallo0")
-            setValid([false], "El título no puede ser más largo de 16 carácteres.");
+            setValid(false);
+            setText("El título no puede ser más largo de 32 carácteres.");
             return;
         }
         if (isNaN(price)) {
             console.log("fallo1 ")
-            setValid([false], "El precio debe ser un valor numérico.");
+            setValid(false);
+            setText("El precio debe ser un valor numérico.");
             return;
         }
-        if (rating < 0 || rating > 5) {
+        if (rating < 0 || rating > 5 || isNaN(rating)) {
             console.log("fallo2o")
-            setValid([false], "El rating debe ser un número entre 0 y 5.");
+            setValid(false);
+            setText("El rating debe ser un número entre 0 y 5.")
             return;
         }
-        setValid([true], "");
+        setValid(true);
+        setText("");
 
         const controller = new Controller();
-        const data = await controller.create(title, description, price, img, rating);
+        controller.create(title, description, price, img, rating);
     }
 
     const override = {
@@ -40,34 +45,36 @@ export default function Create() {
 
     return (
         <>
-            <div className={isValid[0] ? "valid-style" : "invalid-style"}>
-                <p>{isValid[0] ? "" : isValid[1]}</p>
-            </div>
             <div className="container-centered">
-                <div className="form-box">
-                    <div className="field">
-                        <label className="inner-item" htmlFor="title">Título</label>
-                        <input className="inner-item" id="title" type="text" />
-                    </div>
-                    <div className="field">
-                        <label className="inner-item" htmlFor="description">Descripción</label>
-                        <input className="inner-item" id="description" type="textarea" />
-                    </div>
-                    <div className="field">
-                        <label className="inner-item" htmlFor="price">Precio</label>
-                        <input className="inner-item" id="price" type="number" />
-                    </div>
-                    <div className="field">
-                        <label className="inner-item" htmlFor="img">Imágen (URL)</label>
-                        <input className="inner-item" id="img" type="text" />
-                    </div>
-                    <div className="field">
-                        <label className="inner-item" htmlFor="rating">Rating</label>
-                        <input className="inner-item" style={override} id="rating" type="text" />
-                        <p className="inner-item">/5</p>
-                    </div>
-                    <div className="field">
-                        <button className="button" onClick={submit}>Crear</button>
+                <p className={isValid ? "valid-style" : "invalid-style"}>{text}</p>
+                <div className="container-centered">
+                    <div className="form-box">
+                        <div className="field">
+                            <label className="inner-item" htmlFor="title">Título</label>
+                            <input className="inner-item" id="title" type="text" />
+                        </div>
+                        <div className="field">
+                            <label className="inner-item" htmlFor="description">Descripción</label>
+                            <input className="inner-item" id="description" type="textarea" />
+                        </div>
+                        <div className="field">
+                            <label className="inner-item" htmlFor="price">Precio</label>
+                            <input className="inner-item" id="price" type="number" />
+                        </div>
+                        <div className="field">
+                            <label className="inner-item" htmlFor="img">Imágen (URL)</label>
+                            <input className="inner-item" id="img" type="text" />
+                        </div>
+                        <div className="field">
+                            <label className="inner-item" htmlFor="rating">Rating</label>
+                            <div className="rating-container">
+                                <input className="inner-item rating-textbox" style={override} id="rating" type="number" />
+                                <p className="inner-item">/5</p>
+                            </div>
+                        </div>
+                        <div className="field">
+                            <button className="clickme-button" onClick={submit}>Crear</button>
+                        </div>
                     </div>
                 </div>
             </div>
