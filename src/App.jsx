@@ -6,7 +6,7 @@ function App() {
 
   return (
     <>
-       <Navbar bg="light" expand="lg">
+       <Navbar className='navigator' bg="light" expand="lg">
         <Container>
           <Link to="/" className="navbar-brand">Cursos</Link>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />

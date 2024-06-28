@@ -2,13 +2,11 @@ import "./style.css";
 import { useState } from "react";
 import Controller from "./Controler/controller";
 
-const RATING_REGEX = /[0-5]{1}/;
-
 export default function Create() {
 
     const [isValid, setValid] = useState([true, ""]);
 
-    function submit() {
+    async function submit() {
         const title = document.getElementById("title").value;
         const description = document.getElementById("description").value;
         const price = parseFloat(document.getElementById("price").value);
@@ -16,21 +14,24 @@ export default function Create() {
         const rating = document.getElementById("rating").value;
 
         if (title.length > 16) {
+            console.log("fallo0")
             setValid([false], "El título no puede ser más largo de 16 carácteres.");
             return;
         }
         if (isNaN(price)) {
+            console.log("fallo1 ")
             setValid([false], "El precio debe ser un valor numérico.");
             return;
         }
-        if (RATING_REGEX.test(rating)) {
+        if (rating < 0 || rating > 5) {
+            console.log("fallo2o")
             setValid([false], "El rating debe ser un número entre 0 y 5.");
             return;
         }
         setValid([true], "");
 
         const controller = new Controller();
-        controller.create(title, description, price, img, rating);
+        const data = await controller.create(title, description, price, img, rating);
     }
 
     const override = {
