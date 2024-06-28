@@ -1,4 +1,3 @@
-import { Button } from "bootstrap";
 import "./style.css";
 import { useState } from "react";
 import Controller from "./Controler/controller";
@@ -15,7 +14,7 @@ export default function Create() {
         const price = parseFloat(document.getElementById("price").value);
         const img = document.getElementById("img").value;
         const rating = document.getElementById("rating").value;
-        
+
         if (title.length > 16) {
             setValid([false], "El título no puede ser más largo de 16 carácteres.");
             return;
@@ -31,7 +30,7 @@ export default function Create() {
         setValid([true], "");
 
         const controller = new Controller();
-        controller
+        controller.create(title, description, price, img, rating);
     }
 
     const validStyle = {
@@ -56,33 +55,38 @@ export default function Create() {
     }
 
     return (
-        <div className="container-centered">
-            <div className="form-box">
-                <div className="field">
-                    <label className="inner-item" htmlFor="title">Título</label>
-                    <input className="inner-item" id="title" type="text" />
-                </div>
-                <div className="field">
-                    <label className="inner-item" htmlFor="description">Descripción</label>
-                    <input className="inner-item" id="description" type="textarea" />
-                </div>
-                <div className="field">
-                    <label className="inner-item" htmlFor="price">Precio</label>
-                    <input className="inner-item" id="price" type="number" />
-                </div>
-                <div className="field">
-                    <label className="inner-item" htmlFor="img">Imágen (URL)</label>
-                    <input className="inner-item" id="img" type="text" />
-                </div>
-                <div className="field">
-                    <label className="inner-item" htmlFor="rating">Rating</label>
-                    <input className="inner-item" style={override} id="rating" type="text"/>
-                    <p className="inner-item">/5</p>
-                </div>
-                <div className="field">
-                    <button className="button" onClick={submit}>Crear</button>
+        <>
+            <div style={isValid[0] ? validStyle : invalidStyle}>
+                <p>{isValid[0] ? "" : isValid[1]}</p>
+            </div>
+            <div className="container-centered">
+                <div className="form-box">
+                    <div className="field">
+                        <label className="inner-item" htmlFor="title">Título</label>
+                        <input className="inner-item" id="title" type="text" />
+                    </div>
+                    <div className="field">
+                        <label className="inner-item" htmlFor="description">Descripción</label>
+                        <input className="inner-item" id="description" type="textarea" />
+                    </div>
+                    <div className="field">
+                        <label className="inner-item" htmlFor="price">Precio</label>
+                        <input className="inner-item" id="price" type="number" />
+                    </div>
+                    <div className="field">
+                        <label className="inner-item" htmlFor="img">Imágen (URL)</label>
+                        <input className="inner-item" id="img" type="text" />
+                    </div>
+                    <div className="field">
+                        <label className="inner-item" htmlFor="rating">Rating</label>
+                        <input className="inner-item" style={override} id="rating" type="text" />
+                        <p className="inner-item">/5</p>
+                    </div>
+                    <div className="field">
+                        <button className="button" onClick={submit}>Crear</button>
+                    </div>
                 </div>
             </div>
-        </div>
+        </>
     )
 }
