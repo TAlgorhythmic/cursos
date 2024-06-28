@@ -13,7 +13,7 @@ export default function Create() {
         const img = document.getElementById("img").value;
         const rating = document.getElementById("rating").value;
 
-        if (title.length > 16) {
+        if (title.length > 50) {
             console.log("fallo0")
             setValid([false], "El título no puede ser más largo de 16 carácteres.");
             return;
