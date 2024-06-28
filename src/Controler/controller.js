@@ -14,10 +14,8 @@ class Controller {
         }
         const response = await fetch(BASEURL, request);
         const data = await response.json();
-        const finalObjects = data.map(e => {
-            new Curso(e.Id, e.title, e.description, e.price, e.img, e.rating);
-        })
-        return finalObjects;
+        
+        return data.list;
     }
     
     async get(id) {
