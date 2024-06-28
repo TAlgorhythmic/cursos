@@ -40,7 +40,7 @@ async function update(curso) {
             "Content-Type": "application/json",
             "xc-token": TOKEN
         },
-        "body": curso
+        "body": JSON.stringify(curso)
     }
     const response = await fetch(BASEURL, request);
     const data = await response.json();
@@ -52,7 +52,6 @@ async function remove(id) {
         "method": "DELETE",
         
     }
-
 }
 
 export {getAll, get, update, remove, create};
