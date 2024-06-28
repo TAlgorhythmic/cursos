@@ -39,11 +39,11 @@ return (
     <>
     <Row>
     <Card >
-                        <Card.Img variant="top" src={curso.src} />
+                        <Card.Img variant="top" src={curso.img} />
                         <Card.Body>
                             <Card.Title>{curso.title}</Card.Title>
                             <Card.Text>
-                                {curso.descripcio}
+                                {curso.description}
                             </Card.Text>
                             <Link className="btn btn-outline-primary" to="/">Tornar</Link>
                         </Card.Body>
