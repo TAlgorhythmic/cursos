@@ -25,3 +25,19 @@ div.container-centered {
 .inner-item {
     margin: 15px;
 }
+.valid-style {
+    height: 0px;
+    width: 0px;
+    margin: 0px;
+}
+.invalid-style {
+    height: 100px;
+    width: 100%;
+    margin: 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: red;
+    color: white;
+    font-size: larger;
+}

@@ -33,30 +33,13 @@ export default function Create() {
         controller.create(title, description, price, img, rating);
     }
 
-    const validStyle = {
-        height: "0px",
-        width: "0px",
-        margin: "0px"
-    }
-    const invalidStyle = {
-        height: "100px",
-        width: "100%",
-        margin: "0px",
-        display: "flex",
-        justifyContent: "center",
-        alignItems: "center",
-        backgroundColor: "red",
-        color: "white",
-        fontSize: "larger"
-    }
-
     const override = {
         marginRight: "0px !important"
     }
 
     return (
         <>
-            <div style={isValid[0] ? validStyle : invalidStyle}>
+            <div className={isValid[0] ? "valid-style" : "invalid-style"}>
                 <p>{isValid[0] ? "" : isValid[1]}</p>
             </div>
             <div className="container-centered">
