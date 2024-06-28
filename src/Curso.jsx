@@ -1,14 +1,14 @@
 import { useParams } from "react-router-dom";
 import { useState, useEffect } from "react";
-import 
 
 function Curso(){
 
     const { id } = useParams();
     const [curso, setCurso] = useState('');
 
+return (
+    <>
+    </>
+)
 
-
-
-
-} export default Curso;
+}export default Curso;
