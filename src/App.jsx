@@ -1,11 +1,8 @@
-import { useState } from 'react';
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Outlet, Link } from "react-router-dom";
-
 import './App.css'
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
@@ -15,7 +12,8 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Link to="/about" className='nav-link'>About...</Link>
+              <Link to="/about" className='nav-link'></Link>
+              <Link to="/create" className='nav-link'>New curso</Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

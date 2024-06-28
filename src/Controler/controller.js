@@ -1,7 +1,7 @@
 const BASEURL = "https://app.nocodb.com/api/v2/tables/mf5sryfvazngwcq/records";
 const TOKEN = "ziaDGUyYpmYuGvXnT6hCJ8-08LjovuSeme3fFQdY";
 
-import Curso from "./Curso.js";
+
 
 class Controller {
     async getAll() {
