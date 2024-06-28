@@ -40,7 +40,7 @@ async function update(curso) {
             "Content-Type": "application/json",
             "xc-token": TOKEN
         },
-        "body": curso
+        "body": JSON.stringify(curso)
     }
     const response = await fetch(BASEURL, request);
     const data = await response.json();
@@ -50,8 +50,37 @@ async function update(curso) {
 async function remove(id) {
     const request = {
         "method": "DELETE",
-        
+        "headers": {
+            "Content-Type": "application/json",
+            "xc-token": TOKEN
+        },
+        "body": JSON.stringify({
+            "Id": id
+        })
     }
+    const response = await fetch(BASEURL, request);
+    const data = await response.json();
+    return data;
+}
+
+async function create(title, description, price, img, rating) {
+    const request = {
+        "method": "POST",
+        "headers": {
+            "Content-Type": "application/json",
+            "xc-token": TOKEN
+        },
+        "body": JSON.stringify({
+            "title": title,
+            "description": description,
+            "price": price,
+            "img": img,
+            "rating": rating
+        })
+    }
+    const response = await fetch(BASEURL, request);
+    const data = await response.json();
+    return data;
 }
 
 export {getAll, get, update, remove, create};
