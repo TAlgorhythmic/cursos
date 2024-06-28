@@ -1,6 +1,9 @@
 import { Button } from "bootstrap";
 import "./style.css";
 import { useState } from "react";
+import Controller from "./Controler/controller";
+
+const RATING_REGEX = /[0-5]{1}/;
 
 export default function Create() {
 
@@ -9,17 +12,26 @@ export default function Create() {
     function submit() {
         const title = document.getElementById("title").value;
         const description = document.getElementById("description").value;
-        const price = document.getElementById("price").value;
+        const price = parseFloat(document.getElementById("price").value);
         const img = document.getElementById("img").value;
         const rating = document.getElementById("rating").value;
         
         if (title.length > 16) {
-            setValid([false], "El título no puede ser más largo de 16 carácteres.")
+            setValid([false], "El título no puede ser más largo de 16 carácteres.");
             return;
         }
-        if (!) {
-            
+        if (isNaN(price)) {
+            setValid([false], "El precio debe ser un valor numérico.");
+            return;
         }
+        if (RATING_REGEX.test(rating)) {
+            setValid([false], "El rating debe ser un número entre 0 y 5.");
+            return;
+        }
+        setValid([true], "");
+
+        const controller = new Controller();
+        controller
     }
 
     const validStyle = {
