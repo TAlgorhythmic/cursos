@@ -52,6 +52,7 @@ async function remove(id) {
         "method": "DELETE",
         
     }
+
 }
 
 export {getAll, get, update, remove, create};
