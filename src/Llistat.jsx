@@ -22,7 +22,6 @@ function Llistat() {
 
         getAllCursos();
 
-    }, [])
 
 
     if (cursos.length == 0) {
