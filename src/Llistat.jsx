@@ -52,7 +52,5 @@ function Llistat() {
 
         </>
     )
-}
-
-
-export default Llistat;
+};
+} export default Llistat;
