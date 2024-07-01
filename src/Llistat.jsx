@@ -21,7 +21,6 @@ function Llistat() {
             }
 
         }
-
         if (cursos.length === 0) getAllCursos();
     }, [])
 
