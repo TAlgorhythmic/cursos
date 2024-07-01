@@ -45,7 +45,7 @@ function Llistat() {
                     {cursos.map((c) => {
                         currentGray = !currentGray;
                         return (
-                            <CursoComp id={c.Id} title={c.title} description={c.description} price={c.price} img={c.img} rating={c.rating} gray={currentGray}/>
+<CursoComp id={c.Id} title={c.title} description={c.description} price={c.price} img={c.img} rating={c.rating} gray={currentGray}/>
                         )
                     })}
                 </div>
