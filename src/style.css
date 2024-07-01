@@ -132,3 +132,42 @@ button.clickme-button:hover {
         opacity: 100%;
     }
 }
+div.cursos-lista {
+    width: 80%;
+    height: fit-content;
+    border: 1px solid black;
+    box-shadow: 0px 0px 6px black;
+}
+div.curso {
+    width: 100%;
+    height: fit-content;
+}
+.curso-img {
+    height: 128px;
+    border: 1px solid black;
+}
+.flex-row-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: row;
+}
+
+.flex-column-start {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    flex-direction: column;
+}
+div.rating {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+}
+.star {
+    width: 20px;
+    height: 20px;
+}

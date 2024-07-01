@@ -18,8 +18,8 @@ function Llistat() {
             } else {
                 console.log(recs)
             }
-        
-        } 
+
+        }
 
         getAllCursos();
     }, [])
@@ -34,14 +34,13 @@ function Llistat() {
         )
     }
 
+    const currentGray = false;
 
     return (
         <>
             <div className="fade-in">
                 <h1>Llista de cursos</h1>
-
-                <ul>
-
+                <div className="cursos-lista">
                     {cursos.map((c) => {
                         return (
                             <li key={c.Id} >
@@ -49,11 +48,11 @@ function Llistat() {
                             </li>
                         )
                     })}
-                </ul>
+                </div>
             </div>
 
 
         </>
     )
 
-} export default Llistat
+} export default Llistat;
