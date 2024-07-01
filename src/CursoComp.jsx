@@ -38,7 +38,6 @@ export default function CursoComp(props) {
             }
             index++;
         }
-        console.log(comps);
         return comps;
     }
     const starComps = createComps();
