@@ -47,13 +47,13 @@ class Controller {
     
     async remove(id) {
         const request = {
-            "method": "DELETE",
-            "headers": {
+            method: "DELETE",
+            headers: {
                 "Content-Type": "application/json",
                 "xc-token": TOKEN
             },
-            "body": JSON.stringify({
-                "Id": id
+            body: JSON.stringify({
+                Id: id
             })
         }
         const response = await fetch(BASEURL, request);
