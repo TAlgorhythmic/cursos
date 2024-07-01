@@ -18,9 +18,11 @@ function Llistat() {
             } else {
                 console.log(recs)
             }
-        }
+        
+        } 
 
         getAllCursos();
+    }, [])
 
 
 
@@ -31,6 +33,7 @@ function Llistat() {
             </>
         )
     }
+
 
     return (
         <>
@@ -52,5 +55,5 @@ function Llistat() {
 
         </>
     )
-};
-} export default Llistat;
+
+} export default Llistat

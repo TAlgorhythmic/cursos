@@ -1,8 +1,12 @@
 import { Navbar, Nav, Container } from 'react-bootstrap';
 import { Outlet, Link } from "react-router-dom";
+import{useState} from "react";
+import Edit from './Edit';
 import './App.css'
 
 function App() {
+
+  const[initialCourse, setInitialCourse] = useState("");
 
   return (
     <>
@@ -14,6 +18,7 @@ function App() {
             <Nav className="me-auto">
               <Link to="/about" className='nav-link'></Link>
               <Link to="/create" className='nav-link'>New curso</Link>
+              <Link to="/delete" className='nav-link'>Eliminar curso</Link>
             </Nav>
           </Navbar.Collapse>
         </Container>

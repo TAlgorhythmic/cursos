@@ -1,0 +1,29 @@
+import Controller from "./Controler/controller";
+import React, { useEffect, useState } from "react";
+
+ function Delete(id) {
+    const[cursoDel, setCursoDel]=useState("");
+
+    useEffect(() => {
+
+        async function deleteCurso() {
+            const cursosController = new Controller();
+            const resposta = await cursosController.remove(id);
+            if (resposta) {
+                setCursoDel(resposta);
+
+            } else {
+                console.log(resposta)
+            }
+        }
+
+        deleteCurso();
+
+    }, [])
+
+    return (
+        <>
+   
+        <>
+    )
+}  export default Delete;
