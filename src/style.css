@@ -141,10 +141,15 @@ div.cursos-lista {
 div.curso {
     width: 100%;
     height: fit-content;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: flex-start;
 }
 .curso-img {
     height: 128px;
-    border: 1px solid black;
+    width: 128px;
 }
 .flex-row-start {
     display: flex;
@@ -153,7 +158,9 @@ div.curso {
     flex-wrap: wrap;
     flex-direction: row;
 }
-
+.percent {
+    width: 100%;
+}
 .flex-column-start {
     display: flex;
     justify-content: flex-start;
@@ -161,13 +168,36 @@ div.curso {
     flex-wrap: wrap;
     flex-direction: column;
 }
+.left-margin {
+    margin-left: 18px;
+}
+.top-margin {
+    margin-top: 15px;
+}
 div.rating {
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: row;
+    height: 50%;
+    width: 100%;
 }
-.star {
-    width: 20px;
-    height: 20px;
+.price {
+    height: 50%;
+    width: 100%;
+}
+div.absolute-end {
+    right: 0px;
+    top: 0px;
+    bottom: 0px;
+    height: 100%;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.description {
+    width: fit-content;
+    max-width: 60%;
 }

@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom";
 import Controller from "./Controler/controller.js";
 import { useEffect, useState } from "react";
+import CursoComp from "./CursoComp.jsx";
 
 
 
@@ -21,12 +22,12 @@ function Llistat() {
 
         }
 
-        getAllCursos();
+        if (cursos.length === 0) getAllCursos();
     }, [])
 
 
 
-    if (cursos.length == 0) {
+    if (cursos.length === 0) {
         return (
             <>
                 <span className="loading" />
@@ -34,7 +35,7 @@ function Llistat() {
         )
     }
 
-    const currentGray = false;
+    let currentGray = true;
 
     return (
         <>
@@ -42,10 +43,9 @@ function Llistat() {
                 <h1>Llista de cursos</h1>
                 <div className="cursos-lista">
                     {cursos.map((c) => {
+                        currentGray = !currentGray;
                         return (
-                            <li key={c.Id} >
-                                <Link to={"/curso/" + c.Id} >{c.title}</Link>
-                            </li>
+                            <CursoComp id={c.Id} title={c.title} description={c.description} price={c.price} img={c.img} rating={c.rating} gray={currentGray}/>
                         )
                     })}
                 </div>
