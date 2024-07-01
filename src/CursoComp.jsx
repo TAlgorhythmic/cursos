@@ -54,7 +54,9 @@ export default function CursoComp(props) {
                     <div className="rating">
                         {starComps}
                     </div>
-                    <div className="price">${price}</div>
+                    <div className="price">
+                        <p>${price}</p>
+                    </div>
                 </div>
             </div>
         </>

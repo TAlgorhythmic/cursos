@@ -136,7 +136,7 @@ div.cursos-lista {
     width: 80%;
     height: fit-content;
     border: 1px solid black;
-    box-shadow: 0px 0px 6px black;
+    box-shadow: 0px 0px 15px black;
 }
 div.curso {
     width: 100%;
@@ -150,6 +150,10 @@ div.curso {
 .curso-img {
     height: 128px;
     width: 128px;
+    min-width: 128px;
+    max-width: 128px;
+    min-height: 128px;
+    max-height: 128px;
 }
 .flex-row-start {
     display: flex;
@@ -179,11 +183,13 @@ div.rating {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    height: 50%;
+    height: 50% !important;
+    min-height: 50%;
     width: 100%;
 }
 .price {
-    height: 50%;
+    height: 50% !important;
+    min-height: 50%;
     width: 100%;
 }
 div.absolute-end {
