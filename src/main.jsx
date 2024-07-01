@@ -8,6 +8,8 @@ import Curso from './Curso.jsx'
 import NotFound from './NotFound.jsx'
 import Llistat from './Llistat.jsx'
 import Create from './Create.jsx';
+import Update from './Update.jsx';
+import Delete from './Delete.jsx';
 
 
 ReactDOM.createRoot(document.getElementById('root')).render(
@@ -18,6 +20,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route index element={<Llistat />} />
           <Route path="/curso/:id" element={<Curso />} />
           <Route path="/create" element={<Create />} />
+          <Route path="/update" element={<Update />} />
+          <Route path="/delete" element={<Delete />} />
           <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>
