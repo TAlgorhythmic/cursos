@@ -14,8 +14,7 @@ export default function Delete() {
 
         const cursosController = new Controller();
             const response = await cursosController.remove(courseId);
-            if (response) {
-               
+            if (response) { 
                 setCourseId(''); 
     }
 }

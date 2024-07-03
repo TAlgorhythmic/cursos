@@ -1,20 +1,28 @@
 import { useState, useEffect } from "react";
 import Controller from "./Controler/controller"; 
 
-export default function Update(id) {
-    const [course, setCourse] = useState("");
-
+export default function Update(curso) {
+    const [title, setTitle] = useState("curso.title");
+    const [description, setDescription] = useState("curso.description");
+    const [price, setPrice] = useState("curso.price");
+    const [img, setImg] = useState("curso.img");
+    const [rating, setRating] = useState("curso.rating");
+    
     useEffect(() => {
-        async function fetchCourse() {
+        async function updateCourse() {
             const cursosController = new Controller();
-            const fetchedCourse = await cursosController.get(id);
-            if (fetchedCourse) {
-                setCourse(fetchedCourse);
+            const updatedCourse = await cursosController.update(curso.id, title, description, price, img, rating);
+            if (updatedCourse) {
+                setTitle(updatedCourse.title);
+                setDescription(updatedCourse.description);
+                setPrice(updatedCourse.price);
+                setImg(updatedCourse.img);
+                setRating(updatedCourse.rating);
             } else {
-                console.log('Curso no encontrado');
+                console.log('Error no actualizado');
             }
         }
-        fetchCourse();
+        updateCourse();
     }, []);
 
     const handleChange = (e) => {
@@ -22,25 +30,8 @@ export default function Update(id) {
         setCourse({ ...course, [name]: value });
     };
 
-    const handleSubmit = async (e) => {
-        e.preventDefault();
-        const cursosController = new Controller();
-        try {
-            const updatedCourse = await cursosController.update(course);
-            if (updatedCourse) {
-                setCourse(updatedCourse);
-                console.log('Curso actualizado con éxito');
-                history.push('/'); // Redirigir a la página principal después de actualizar
-            } else {
-                console.log('No se recibieron datos actualizados');
-            }
-        } catch (error) {
-            console.error('Error al actualizar el curso:', error);
-        }
-    };
-
     return (
-        <form onSubmit={handleSubmit}>
+        <form >
             <div>
                 <label>Title:</label>
                 <input 
@@ -74,7 +65,7 @@ export default function Update(id) {
                     type="text" 
                     name="img" 
                     value={course.img} 
-                    onChange={handleChange} 
+                    onChange={handleChange}
                 />
             </div>
             <div>
@@ -83,7 +74,8 @@ export default function Update(id) {
                     type="number" 
                     name="rating" 
                     value={course.rating} 
-                    onChange={handleChange} 
+                    onChange={handleChange}
+                   
                 />
             </div>
             <button type="submit">Update Course</button>
