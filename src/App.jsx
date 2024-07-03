@@ -15,7 +15,6 @@ function App() {
             <Nav className="me-auto">
               <Link to="/about" className='nav-link'></Link>
               <Link to="/create" className='nav-link'>New curso</Link>
-             <Link to="/update" className='nav-link'>Edit curso</Link>
              <Link to="/delete" className='nav-link'>Delete curso</Link>
             </Nav>
           </Navbar.Collapse>
