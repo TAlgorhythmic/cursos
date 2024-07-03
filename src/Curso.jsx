@@ -38,9 +38,9 @@ function Curso() {
 
     return (
         <>
-            <Row>
-                <Card >
-                    <Card.Img variant="top" src={curso.img} />
+            <Row >
+                <Card  className="card-curso"  >
+                    <Card.Img  className="imagen" variant="top" src={curso.img} />
                     <Card.Body>
                         <Card.Title>{curso.title}</Card.Title>
                         <Card.Text>

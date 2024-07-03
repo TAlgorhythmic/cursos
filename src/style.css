@@ -273,4 +273,11 @@ div.absolute-end {
     background-position: center;
     cursor: pointer;
     opacity: 0%;
+}.card-curso{
+    width: 20rem;
+    height: 50%;
+    margin:auto;
+    margin-top: 25px;
+    text-align: justify;
+    padding: 35px;
 }
