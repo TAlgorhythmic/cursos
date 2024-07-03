@@ -19,18 +19,19 @@ export default function Delete() {
     }
 }
     return (
-        <div>
-            <h1>Eliminar Curso</h1>
-            <div>
-            <label >ID del Curso</label>
+        
+            <>
+            <div className="e"> 
+            <label className="eliminar" >ID del Curso</label>
+            
                             <input 
                                 type="number" 
                                 value={courseId} 
                                 onChange={handleChange} 
                             />
-
-                <button onClick={handleDeleteCourse}>E</button>
-            </div>
-        </div>
+                            
+                <button onClick={handleDeleteCourse} className="boton-eliminar">Eliminar</button>
+                </div>
+            </>
     );
 }

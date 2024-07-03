@@ -118,8 +118,10 @@ button.clickme-button:hover {
     }
 }
 .fade-in {
+    margin-left: 155px;
     opacity: 100%;
     animation: fadein-animation 0.5s;
+   
 }
 
 @keyframes fadein-animation {
@@ -209,4 +211,26 @@ div.absolute-end {
 .description {
     width: fit-content;
     max-width: 60%;
+}.e {
+    border-radius: 4px;
+    padding: 5px;
+    text-align: center;
+}
+.eliminar {
+    margin-right: 10px;
+    padding: 5px;
+   
+}
+.boton-eliminar {
+    margin-left: 10px;
+    padding: 5px;
+    background-color: #d9534f;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.boton-eliminar:hover {
+    background-color: #c9302c;
 }

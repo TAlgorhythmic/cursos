@@ -39,7 +39,7 @@ function Llistat() {
     return (
         <>
             <div className="fade-in">
-                <h1>Llista de cursos</h1>
+                
                 <div className="cursos-lista">
                     {cursos.map((c) => {
                         currentGray = !currentGray;
