@@ -57,6 +57,7 @@ export default function CursoComp(props) {
                     <div className="price">
                         <p>${price}</p>
                     </div>
+                    <Link className="edit-button" to={`/update/${id}`}></Link>
                 </div>
             </div>
         </>

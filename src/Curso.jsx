@@ -26,7 +26,7 @@ function Curso() {
 
         fetchCurso();
 
-    }, [])
+    }, []);
 
     if (!curso) {
         return (

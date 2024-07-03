@@ -219,6 +219,10 @@ div.absolute-end {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+.curso:hover .edit-button {
+    opacity: 100%;
 }
 .description {
     width: fit-content;
@@ -253,4 +257,20 @@ div.absolute-end {
     padding:10px;
     margin-bottom: 10px;
     border-bottom: 10px;
+}
+.edit-button {
+    width: 20px;
+    height: 20px;
+    max-width: 20px;
+    max-height: 20px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 10px;
+    top: 45px;
+    background-image: url('https://cdn.discordapp.com/attachments/1242519476633866313/1258058569283014779/edit-icon-png-3602.png?ex=6686a9d8&is=66855858&hm=124c9c41341dd026367879938a1aaa5e5e9888dbfa43ce386fc039dacd718e63&');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    opacity: 0%;
 }
