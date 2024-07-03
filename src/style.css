@@ -226,7 +226,7 @@ div.absolute-end {
 }
 .description {
     width: fit-content;
-    max-width: 60%;
+    max-width: 100%;
 }.e {
     border-radius: 4px;
     padding: 5px;
