@@ -28,7 +28,7 @@ class Controller {
         }
         const response = await fetch(BASEURL + "/" + id, request);
         const data = await response.json();
-        return data.list;
+        return data;
     }
     
     async update(curso) {

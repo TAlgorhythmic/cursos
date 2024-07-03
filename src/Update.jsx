@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react";
-import Controller from "./Controler/controller"; 
+import controlador from "./main";
 
 export default function Update(curso) {
     const [title, setTitle] = useState("curso.title");
@@ -10,8 +10,7 @@ export default function Update(curso) {
     
     useEffect(() => {
         async function updateCourse() {
-            const cursosController = new Controller();
-            const updatedCourse = await cursosController.update(curso.id, title, description, price, img, rating);
+            const updatedCourse = await controlador.update(curso.id, title, description, price, img, rating);
             if (updatedCourse) {
                 setTitle(updatedCourse.title);
                 setDescription(updatedCourse.description);

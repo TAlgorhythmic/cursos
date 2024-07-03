@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import Controller from './Controler/controller.js';
+import controlador from './main.jsx';
 
 export default function Delete() {
     const [courseId, setCourseId] = useState('');
@@ -12,8 +12,7 @@ export default function Delete() {
         console.log(courseId);
        // if (!courseId) {
 
-        const cursosController = new Controller();
-            const response = await cursosController.remove(courseId);
+            const response = await controlador.remove(courseId);
             if (response) { 
                 setCourseId(''); 
     }

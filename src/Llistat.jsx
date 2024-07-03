@@ -1,9 +1,6 @@
-import { Link } from "react-router-dom";
-import Controller from "./Controler/controller.js";
 import { useEffect, useState } from "react";
 import CursoComp from "./CursoComp.jsx";
-
-
+import controlador from "./main.jsx";
 
 function Llistat() {
 
@@ -12,8 +9,7 @@ function Llistat() {
     useEffect(() => { //es una array de los states
 
         async function getAllCursos() {
-            const cursosController = new Controller();
-            const recs = await cursosController.getAll();
+            const recs = await controlador.getAll();
             if (recs.length) {
                 setCursos(recs);
             } else {

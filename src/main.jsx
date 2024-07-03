@@ -1,4 +1,3 @@
-
 import React from 'react'
 import ReactDOM from 'react-dom/client'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -10,7 +9,9 @@ import Llistat from './Llistat.jsx'
 import Create from './Create.jsx';
 import Update from './Update.jsx';
 import Delete from './Delete.jsx';
+import Controller from './Controler/controller.js';
 
+const controlador = new Controller();
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -29,3 +30,5 @@ ReactDOM.createRoot(document.getElementById('root')).render(
 
   </React.StrictMode>
 );
+
+export default controlador;

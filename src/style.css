@@ -224,7 +224,6 @@ div.absolute-end {
 .eliminar {
     margin-right: 10px;
     padding: 5px;
-   
 }
 .boton-eliminar {
     margin-left: 10px;
@@ -235,7 +234,11 @@ div.absolute-end {
     border-radius: 4px;
     padding: 5px 10px;
     cursor: pointer;
+    transition: 0.4s;
 }
 .boton-eliminar:hover {
     background-color: #c9302c;
+}
+.thirty-percent {
+    width: 30% !important;
 }
