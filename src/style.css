@@ -70,6 +70,11 @@ div.rating-container {
 }
 .rating-textbox {
     width: 50px;
+    margin-right: 0px;
+    margin-top: -15px;
+}
+.zero-left-margin {
+    margin-left: 2px;
 }
 button.clickme-button {
     width: 180px;
@@ -84,6 +89,10 @@ button.clickme-button {
 button.clickme-button:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);;
     background-color: black;
+}
+.key {
+    width: 110px;
+    max-width: 110px;
 }
 .loading {
     width: 48px;
@@ -226,7 +235,7 @@ div.absolute-end {
 }
 .description {
     width: fit-content;
-    max-width: 100%;
+    max-width: 0%;
 }.e {
     border-radius: 4px;
     padding: 5px;
@@ -239,16 +248,18 @@ div.absolute-end {
 .boton-eliminar {
     margin-left: 10px;
     padding: 5px;
-    background-color: #d9534f;
+    background-image: linear-gradient(to left, rgba(203, 0, 0, 0.8), rgba(255, 137, 137, 0.8));
+    background-color: transparent;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 30px;
     padding: 5px 10px;
     cursor: pointer;
-    transition: 0.4s;
+    transition-duration: 0.5s;
 }
 .boton-eliminar:hover {
-    background-color: #c9302c;
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);;
+    background-color: black;
 }
 .thirty-percent {
     width: 30% !important;
