@@ -45,12 +45,12 @@ export default function Delete() {
                 <br></br>
                 <div className="container-vista">
                 {courses.map(course => (
-                <Card key={course.id}>
-                    <Card.Body className='body-card'>
-                        <Card.Title className="title">{course.title}</Card.Title>
-                        <Card.Text className="id">ID: {course.Id}</Card.Text>
-                    </Card.Body>
-                </Card>
+                <div key={course.id}>
+                    <div className="body-card">
+                        <div className="title">{course.title}</div>
+                        <div className="id">ID: {course.Id}</div>
+                    </div>
+                </div>
             ))}
             </div>
             </>
