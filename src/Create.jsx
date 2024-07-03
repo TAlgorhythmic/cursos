@@ -49,26 +49,26 @@ export default function Create() {
                 <div className="container-centered">
                     <div className="form-box">
                         <div className="field">
-                            <label className="inner-item" htmlFor="title">Título</label>
+                            <label className="inner-item key" htmlFor="title">Título</label>
                             <input className="inner-item" id="title" type="text" />
                         </div>
                         <div className="field">
-                            <label className="inner-item" htmlFor="description">Descripción</label>
+                            <label className="inner-item key" htmlFor="description">Descripción</label>
                             <input className="inner-item" id="description" type="textarea" />
                         </div>
                         <div className="field">
-                            <label className="inner-item" htmlFor="price">Precio</label>
+                            <label className="inner-item key" htmlFor="price">Precio</label>
                             <input className="inner-item" id="price" type="number" />
                         </div>
                         <div className="field">
-                            <label className="inner-item" htmlFor="img">Imágen (URL)</label>
+                            <label className="inner-item key" htmlFor="img">Imágen (URL)</label>
                             <input className="inner-item" id="img" type="text" />
                         </div>
                         <div className="field">
-                            <label className="inner-item" htmlFor="rating">Rating</label>
+                            <label className="inner-item key" htmlFor="rating">Rating</label>
                             <div className="rating-container">
                                 <input className="inner-item rating-textbox" style={override} id="rating" type="number" />
-                                <p className="inner-item">/5</p>
+                                <p className="inner-item zero-left-margin">/5</p>
                             </div>
                         </div>
                         <div className="field">
