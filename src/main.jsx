@@ -21,7 +21,7 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route index element={<Llistat />} />
           <Route path="/curso/:id" element={<Curso />} />
           <Route path="/create" element={<Create />} />
-          <Route path="/update" element={<Update />} />
+          <Route path="/update/:id" element={<Update />} />
           <Route path="/delete" element={<Delete />} />
           <Route path='*' element={<NotFound />} />
         </Route>

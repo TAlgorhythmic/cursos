@@ -1,6 +1,6 @@
 import "./style.css";
 import { useState } from "react";
-import Controller from "./Controler/controller";
+import controlador from "./main";
 
 export default function Create() {
 
@@ -35,8 +35,7 @@ export default function Create() {
         setValid(true);
         setText("");
 
-        const controller = new Controller();
-        controller.create(title, description, price, img, rating);
+        controlador.create(title, description, price, img, rating);
     }
 
     const override = {
