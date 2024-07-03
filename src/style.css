@@ -117,20 +117,27 @@ button.clickme-button:hover {
       transform: rotate(360deg);
     }
 }
+.super-container-centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    width: 100%;
+}
 .fade-in {
-    margin-left: 155px;
+    margin-top: 30px;
     opacity: 100%;
     animation: fadein-animation 0.5s;
-   
+    margin-left: 13%;
 }
 
 @keyframes fadein-animation {
     0% {
-        margin-left: -30px;
+        margin-left: -5%;
         opacity: 0%;
     }
     100% {
-        margin-left: 0px;
+        margin-left: 13%;
         opacity: 100%;
     }
 }
