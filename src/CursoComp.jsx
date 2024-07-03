@@ -29,11 +29,11 @@ export default function CursoComp(props) {
         for (ratingTemp; index <= 5; ratingTemp--) {
             if (ratingTemp > 0) {
                 comps.push((
-                    <img key={index} src="https://cdn.discordapp.com/attachments/1242519476633866313/1257352407159931051/full_star.png?ex=6684182e&is=6682c6ae&hm=2fa26ea2a3e02ccda8ef7ba94bfa1cfee61759c6f2ad13739ed2be60f3cf7bd4&" style={fullStar} />
+                    <img key={index} src="https://cdn.discordapp.com/attachments/1242519476633866313/1258066393094426674/full_star.png?ex=6686b121&is=66855fa1&hm=278bff2de93171d72af02514d03878cf78f39a7f3646b3f238b7c6bdfbfa7bde&" style={fullStar} />
                 ))
             } else {
                 comps.push((
-                    <img key={index} src="https://cdn.discordapp.com/attachments/1242519476633866313/1257352406828585051/empty_star.png?ex=6684182e&is=6682c6ae&hm=65876e643a21cf876ea4d9067bf8e33903f78a72c59b3937805e167a40bfbb3f&" style={emptyStar} />
+                    <img key={index} src="https://cdn.discordapp.com/attachments/1242519476633866313/1258066413516754995/empty_star.png?ex=6686b126&is=66855fa6&hm=d26fb8174de8464eed14a4312ef3f47f7fd69801d0416fe01133c0e51dc21e17&" style={emptyStar} />
                 ))
             }
             index++;
