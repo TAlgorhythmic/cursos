@@ -248,4 +248,9 @@ div.absolute-end {
 }
 .thirty-percent {
     width: 30% !important;
+}.container-vista{
+    justify-content: space-between;
+    padding:10px;
+    margin-bottom: 10px;
+    border-bottom: 10px;
 }

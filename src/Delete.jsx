@@ -1,12 +1,23 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import controlador from './main.jsx';
+import Card from 'react-bootstrap/Card';
 
 export default function Delete() {
     const [courseId, setCourseId] = useState('');
+    const[courses, setCourses] = useState([]);
 
     const handleChange = (e) => {
         setCourseId(e.target.value);
     };
+
+    useEffect(() => {
+        async function fetchCourses() {
+            const allCourses = await controlador.getAll();
+            setCourses(allCourses);
+        }
+
+        fetchCourses();
+    }, []);
 
     async function handleDeleteCourse () {
         console.log(courseId);
@@ -31,6 +42,17 @@ export default function Delete() {
                             
                 <button onClick={handleDeleteCourse} className="boton-eliminar">Eliminar</button>
                 </div>
+                <br></br>
+                <div className="container-vista">
+                {courses.map(course => (
+                <Card key={course.id}>
+                    <Card.Body>
+                        <Card.Title className="titulo">{course.title}</Card.Title>
+                        <Card.Text className="id">ID: {course.Id}</Card.Text>
+                    </Card.Body>
+                </Card>
+            ))}
+            </div>
             </>
     );
 }

@@ -48,8 +48,6 @@ function Llistat() {
                 </div>
             </div>
 
-
-
         </>
     )
 
