@@ -263,10 +263,11 @@ div.absolute-end {
 .thirty-percent {
     width: 30% !important;
 }.container-vista{
+    
+    margin-bottom: 50px;
+    display: flex;
     justify-content: space-between;
-    padding:10px;
-    margin-bottom: 10px;
-    border-bottom: 10px;
+    text-align: center;
 }
 .edit-button {
     width: 20px;
