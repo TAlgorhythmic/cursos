@@ -106,56 +106,5 @@ export default function Update() {
             </div>
         </>
         )
-        return (
-            <div >
-                <p className={isValid ? "valid-style" : "invalid-style"}>{text}</p>
-                <div>
-                    <label>Title:</label>
-                    <input 
-                        type="text" 
-                        name="title" 
-                        id="title"
-                        value={curso.title} 
-                    />
-                </div>
-                <div>
-                    <label>Description:</label>
-                    <input 
-                        type="text" 
-                        name="description" 
-                        id="description"
-                        value={curso.description} 
-                    />
-                </div>
-                <div>
-                    <label>Price:</label>
-                    <input 
-                        type="number" 
-                        name="price" 
-                        id="price"
-                        value={curso.price} 
-                    />
-                </div>
-                <div>
-                    <label>Image URL:</label>
-                    <input 
-                        type="text" 
-                        name="img" 
-                        id="img"
-                        value={curso.img} 
-                    />
-                </div>
-                <div>
-                    <label>Rating:</label>
-                    <input 
-                        type="number" 
-                        name="rating" 
-                        id="rating"
-                        value={curso.rating}                    
-                    />
-                </div>
-                <button onClick={submit}>Update Course</button>
-            </div>
-        );
     }
 }
