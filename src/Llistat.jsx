@@ -25,7 +25,6 @@ function Llistat() {
     if (cursos.length === 0) {
         return (
             <>
-                <span className="loading" />
             </>
         )
     }
