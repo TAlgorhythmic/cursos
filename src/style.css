@@ -167,6 +167,8 @@ div.cursos-lista {
     height: fit-content;
     border: 1px solid black;
     box-shadow: 0px 0px 15px black;
+    color:#263f7a;
+
 }
 div.curso {
     border: 1px solid rgb(0, 0, 0, 0);
@@ -212,6 +214,9 @@ div.curso:hover {
 }
 .top-margin {
     margin-top: 15px;
+    color:#263f7a;
+    text-align: center;
+    text-decoration: none;
 }
 .negative-margin {
     margin-top: -11px;
@@ -342,4 +347,10 @@ div.absolute-end {
     margin-top: 25px;
     text-align: justify;
     padding: 35px;
+}.centrar{
+    text-align: center;
+    color:#263f7a;
+    font-family: 'Playfair Display';
+}.descripcion{
+    font-family: 'Rubik';
 }

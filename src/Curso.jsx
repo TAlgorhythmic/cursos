@@ -42,8 +42,8 @@ function Curso() {
                 <Card  className="card-curso"  >
                     <Card.Img  className="imagen" variant="top" src={curso.img} />
                     <Card.Body>
-                        <Card.Title>{curso.title}</Card.Title>
-                        <Card.Text>
+                        <Card.Title className="centrar">{curso.title}</Card.Title>
+                        <Card.Text className="descripcion">
                             {curso.description}
                         </Card.Text>
                         <Link className="btn btn-outline-primary" to="/">Tornar</Link>

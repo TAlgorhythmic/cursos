@@ -1,8 +1,8 @@
 import { useState, useEffect } from 'react';
 import controlador from './main.jsx';
-import Card from 'react-bootstrap/Card';
 
 export default function Delete() {
+    
     const [courseId, setCourseId] = useState('');
     const[courses, setCourses] = useState([]);
 
