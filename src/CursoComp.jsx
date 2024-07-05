@@ -9,8 +9,8 @@ export default function CursoComp(props) {
     const rating = props.rating;
     const gray = props.gray;
 
-    const grayBackground = { backgroundColor: "gainsboro" };
-    const whiteBackground = { backgroundColor: "white" };
+    const grayBackground = { backgroundColor: "#D3E1FB" };
+    const whiteBackground = { backgroundColor: "#E7EFFF" };
 
     const fullStar = {
         width: '20px',
@@ -51,12 +51,14 @@ export default function CursoComp(props) {
                     <p className="description">{description}</p>
                 </div>
                 <div className="absolute-end">
-                    <div className="rating top-margin">
-                        {starComps}
-                    </div>
                     <div className="price">
                         <p>${price}</p>
                     </div>
+                    <div className="rating negative-margin">
+                        {starComps}
+                    </div>
+
+                    <button className="delete-button" to={`/update/${id}`}></button>
                     <Link className="edit-button" to={`/update/${id}`}></Link>
                 </div>
             </div>

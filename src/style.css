@@ -81,14 +81,26 @@ button.clickme-button {
     height: 45px;
     border: none;
     border-radius: 30px;
-    background-image: linear-gradient(to left, rgb(0, 203, 0, 0.8), rgb(137, 137, 255, 0.8));
-    background-color: transparent;
+    /* background-image: linear-gradient(to left, rgb(0, 203, 0, 0.8), rgb(137, 137, 255, 0.8));*/
+    
+    background-color: #49739a;
     color: white;
     transition-duration: 0.5s;
 }
 button.clickme-button:hover {
     box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.24), 0 17px 50px 0 rgba(0, 0, 0, 0.19);;
-    background-color: black;
+    background-color: #263f7a;
+}
+.adjust {
+    width: 64px;
+    height: auto;
+    max-width: 64px;
+    transition: 0.4s;
+    border-radius: 64px;
+    margin-right: -15px;
+}
+.adjust:hover {
+    filter: brightness(80%);
 }
 .key {
     width: 110px;
@@ -142,7 +154,7 @@ button.clickme-button:hover {
 
 @keyframes fadein-animation {
     0% {
-        margin-left: -5%;
+        margin-left: 10%;
         opacity: 0%;
     }
     100% {
@@ -201,6 +213,9 @@ div.curso:hover {
 .top-margin {
     margin-top: 15px;
 }
+.negative-margin {
+    margin-top: -11px;
+}
 div.rating {
     display: flex;
     justify-content: center;
@@ -214,9 +229,9 @@ div.rating {
     height: 49% !important;
     min-height: 49%;
     width: fit-content;
-    margin-top: 20%;
-    margin-left: 36%;
+    margin-top: 28%;
     font-size: 24px;
+    margin-left: -5%;
 }
 div.absolute-end {
     right: 0px;
@@ -231,6 +246,9 @@ div.absolute-end {
     position: relative;
 }
 .curso:hover .edit-button {
+    opacity: 100%;
+}
+.curso:hover .delete-button {
     opacity: 100%;
 }
 .description {
@@ -270,17 +288,49 @@ div.absolute-end {
     text-align: center;
     justify-content: space-between;
 }
-.edit-button {
-    width: 20px;
-    height: 20px;
-    max-width: 20px;
-    max-height: 20px;
+.delete-button {
+    width: 75px;
+    height: 75px;
+    max-width: 75px;
+    max-height: 75px;
     background-color: transparent;
     border: none;
     position: absolute;
-    right: 10px;
-    top: 45px;
-    background-image: url('https://cdn.discordapp.com/attachments/1242519476633866313/1258058569283014779/edit-icon-png-3602.png?ex=6686a9d8&is=66855858&hm=124c9c41341dd026367879938a1aaa5e5e9888dbfa43ce386fc039dacd718e63&');
+    right: 65px;
+    top: -8px;
+    background-image: url("https://cdn.discordapp.com/attachments/1242519476633866313/1258826004395196427/EduWave__1_-removebg-preview.png?ex=66897493&is=66882313&hm=3a3327b12612238f2735faa775d4fd0530aa58744e49eeb0397f385bf4feaeea&");
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    opacity: 0%;
+}
+.delete-button {
+    width: 75px;
+    height: 75px;
+    max-width: 75px;
+    max-height: 75px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 65px;
+    top: -8px;
+    background-image: url("https://cdn.discordapp.com/attachments/1242519476633866313/1258826004395196427/EduWave__1_-removebg-preview.png?ex=66897493&is=66882313&hm=3a3327b12612238f2735faa775d4fd0530aa58744e49eeb0397f385bf4feaeea&");
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    opacity: 0%;
+}
+.edit-button {
+    width: 78px;
+    height: 78px;
+    max-width: 78px;
+    max-height: 78px;
+    background-color: transparent;
+    border: none;
+    position: absolute;
+    right: 28px;
+    top: -8px;
+    background-image: url('https://cdn.discordapp.com/attachments/1242519476633866313/1258826326056370296/EduWave__2_-removebg-preview.png?ex=668974df&is=6688235f&hm=3efd4c90298f3b9712dce3a4aecfa3a02eacd3053144526535fc4e65f2778f7d&');
     background-size: cover;
     background-position: center;
     cursor: pointer;
