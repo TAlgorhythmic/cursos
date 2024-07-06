@@ -51,15 +51,21 @@ export default function CursoComp(props) {
                     <p className="description">{description}</p>
                 </div>
                 <div className="absolute-end">
-                    <div className="price">
-                        <p>${price}</p>
+                    <div className="flex-row-center">
+                        <div className="button-holder">
+                            <img className="adjust-mid" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F0%2F859.png&f=1&nofb=1&ipt=506cb86dde23dcd450bc615eaca3db5e7b1a839e64a4a96589ac2d31bb46438f&ipo=images"/>
+                            <button className="delete-button" to={`/update/${id}`}></button>
+                            <Link className="edit-button" to={`/update/${id}`}></Link>
+                        </div>
                     </div>
-                    <div className="rating negative-margin">
-                        {starComps}
+                    <div className="flex-column-center">
+                        <div className="price">
+                            <p>${price}</p>
+                        </div>
+                        <div className="rating negative-margin">
+                            {starComps}
+                        </div>
                     </div>
-
-                    <button className="delete-button" to={`/update/${id}`}></button>
-                    <Link className="edit-button" to={`/update/${id}`}></Link>
                 </div>
             </div>
         </>

@@ -15,7 +15,6 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Link to="/about" className='nav-link'></Link>
               <Link to="/create" className='nav-link'>
                 <img className='adjust' src='https://cdn.discordapp.com/attachments/1242519476633866313/1258827022361296956/EduWave__3_-removebg-preview.png?ex=66897586&is=66882406&hm=8b878c87be86db09268ee51f2415bd6ef877e8a7ef4e3b578f0ba528c2146624&'/>
               </Link>

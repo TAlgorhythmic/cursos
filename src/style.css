@@ -199,6 +199,58 @@ div.curso:hover {
     flex-wrap: wrap;
     flex-direction: row;
 }
+.flex-row-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 6px;
+    height: 30%;
+    width: 100%;
+}
+.adjust-mid {
+    width: 28px;
+    height: auto;
+    transition: 0.4s;
+    margin-left: 25px;
+}
+.button-holder {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background-image: url("");
+    opacity: 0%;
+    transition: 0.15s;
+}
+.curso:hover .button-holder {
+    opacity: 100%;
+}
+.button-holder:hover .adjust-mid {
+    rotate: 90deg;
+    margin-left: 0px;
+}
+.button-holder:hover {
+    width: 70%;
+}
+.button-holder:hover .delete-button {
+    opacity: 100%;
+}
+.button-holder:hover .edit-button {
+    opacity: 100%;
+}
+.flex-column-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    flex-direction: row;
+    height: 70%;
+    width: 100%;
+}
 .percent {
     width: 100%;
 }
@@ -226,17 +278,15 @@ div.rating {
     justify-content: center;
     align-items: center;
     flex-direction: row;
-    height: 49% !important;
-    min-height: 49%;
-    width: fit-content;
+    width: 100%;
 }
 .price {
-    height: 49% !important;
-    min-height: 49%;
-    width: fit-content;
-    margin-top: 28%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
     font-size: 24px;
-    margin-left: -5%;
 }
 div.absolute-end {
     right: 0px;
@@ -248,13 +298,6 @@ div.absolute-end {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    position: relative;
-}
-.curso:hover .edit-button {
-    opacity: 100%;
-}
-.curso:hover .delete-button {
-    opacity: 100%;
 }
 .description {
     width: 100%;
@@ -294,52 +337,33 @@ div.absolute-end {
     justify-content: space-between;
 }
 .delete-button {
-    width: 75px;
-    height: 75px;
-    max-width: 75px;
-    max-height: 75px;
+    width: 28px;
+    height: 28px;
+    max-width: 28px;
+    max-height: 28px;
     background-color: transparent;
     border: none;
-    position: absolute;
-    right: 65px;
-    top: -8px;
-    background-image: url("https://cdn.discordapp.com/attachments/1242519476633866313/1258826004395196427/EduWave__1_-removebg-preview.png?ex=66897493&is=66882313&hm=3a3327b12612238f2735faa775d4fd0530aa58744e49eeb0397f385bf4feaeea&");
+    background-image: url("https://cdn.discordapp.com/attachments/1242519476633866313/1259231717399461929/EduWave__1_-removebg-preview.png?ex=668aee6c&is=66899cec&hm=033d9426443e7fab83c51185e4e9e821d252c811fb0933d246907c235a2a9f20&");
     background-size: cover;
     background-position: center;
     cursor: pointer;
     opacity: 0%;
-}
-.delete-button {
-    width: 75px;
-    height: 75px;
-    max-width: 75px;
-    max-height: 75px;
-    background-color: transparent;
-    border: none;
-    position: absolute;
-    right: 65px;
-    top: -8px;
-    background-image: url("https://cdn.discordapp.com/attachments/1242519476633866313/1258826004395196427/EduWave__1_-removebg-preview.png?ex=66897493&is=66882313&hm=3a3327b12612238f2735faa775d4fd0530aa58744e49eeb0397f385bf4feaeea&");
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    opacity: 0%;
+    margin: 8px;
+    transition: 0.15s;
 }
 .edit-button {
-    width: 78px;
-    height: 78px;
-    max-width: 78px;
-    max-height: 78px;
+    width: 28px;
+    height: 28px;
+    max-width: 28px;
+    max-height: 28px;
     background-color: transparent;
     border: none;
-    position: absolute;
-    right: 28px;
-    top: -8px;
-    background-image: url('https://cdn.discordapp.com/attachments/1242519476633866313/1258826326056370296/EduWave__2_-removebg-preview.png?ex=668974df&is=6688235f&hm=3efd4c90298f3b9712dce3a4aecfa3a02eacd3053144526535fc4e65f2778f7d&');
+    background-image: url('https://cdn.discordapp.com/attachments/1242519476633866313/1259231741017718815/EduWave__2_-removebg-preview.png?ex=668aee72&is=66899cf2&hm=92e45bda8799ad81bc39b8c7d4af82c3727a07e6b4c824d87ca159af47fe9b30&');
     background-size: cover;
     background-position: center;
     cursor: pointer;
     opacity: 0%;
+    transition: 0.15s;
 }.card-curso{
     width: 20rem;
     height: 50%;
