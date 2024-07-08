@@ -31,7 +31,6 @@ function Curso() {
     if (!curso) {
         return (
             <>
-                <span className="loading" />
             </>
         )
     }
