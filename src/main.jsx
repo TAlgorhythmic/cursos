@@ -10,6 +10,7 @@ import Create from './Create.jsx';
 import Update from './Update.jsx';
 import Delete from './Delete.jsx';
 import Controller from './Controler/controller.js';
+import UserMain from './UserMain.jsx';
 
 const controlador = new Controller();
 
@@ -18,7 +19,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route index element={<Llistat />} />
+          <Route index element={<UserMain />}/>
+          <Route path="/admin" element={<Llistat />} />
           <Route path="/curso/:id" element={<Curso />} />
           <Route path="/create" element={<Create />} />
           <Route path="/update/:id" element={<Update />} />
