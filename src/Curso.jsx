@@ -46,6 +46,9 @@ function Curso() {
                         <Card.Text className="descripcion">
                             {curso.description}
                         </Card.Text>
+                        <Card.Text >
+                            {curso.video}
+                            </Card.Text>
                         <Link className="btn btn-outline-primary" to="/">Tornar</Link>
                     </Card.Body>
                 </Card>
