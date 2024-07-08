@@ -36,18 +36,26 @@ function Curso() {
         )
     }
 
+    function getEmbedAsComp() {
+        return (
+            <div dangerouslySetInnerHTML={{__html: curso.video}}>
+                
+            </div>
+        )
+    }
+
     return (
         <>
             <Row >
-                <Card  className="card-curso"  >
-                    <Card.Img  className="imagen" variant="top" src={curso.img} />
+                <Card className="card-curso"  >
+                    <Card.Img className="imagen" variant="top" src={curso.img} />
                     <Card.Body>
                         <Card.Title className="centrar">{curso.title}</Card.Title>
                         <Card.Text className="descripcion">
                             {curso.description}
                         </Card.Text>
                         <Card.Text >
-                            {curso.video}
+                            {getEmbedAsComp()}
                             </Card.Text>
                         <Link className="btn btn-outline-primary" to="/">Tornar</Link>
                     </Card.Body>
