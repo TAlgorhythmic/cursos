@@ -8,7 +8,6 @@ import NotFound from './NotFound.jsx'
 import Llistat from './Llistat.jsx'
 import Create from './Create.jsx';
 import Update from './Update.jsx';
-import Delete from './Delete.jsx';
 import Controller from './Controler/controller.js';
 import UserMain from './UserMain.jsx';
 
@@ -24,7 +23,6 @@ ReactDOM.createRoot(document.getElementById('root')).render(
           <Route path="/curso/:id" element={<Curso />} />
           <Route path="/create" element={<Create />} />
           <Route path="/update/:id" element={<Update />} />
-          <Route path="/delete/:id" element={<Delete />} />
           <Route path='*' element={<NotFound />} />
         </Route>
       </Routes>
