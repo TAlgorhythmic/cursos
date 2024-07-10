@@ -38,7 +38,7 @@ export default function UserMain() {
             <Carousel className="carousel-positioning">
                 {
                     cursosTemp.map(curso => {
-                        (
+                        return (
                             <Carousel.Item>
                                 <CarouselDiv img={curso.img} title={curso.title} description={curso.description}/>
                             </Carousel.Item>

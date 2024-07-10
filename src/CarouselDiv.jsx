@@ -4,9 +4,11 @@ export default function CarouselDiv(props) {
     const description = props.description;
     return (
         <div className="full-content">
-            <img src={img} className="full-content"/>
-            <h3>{title}</h3>
-            <p>{description}</p>
+            <img src={img} className="full-content-image" />
+            <div className="flex-column-center2">
+                <h2>{title}</h2>
+                <p className="margin">{description}</p>
+            </div>
         </div>
     )
 }
