@@ -19,8 +19,8 @@ ReactDOM.createRoot(document.getElementById('root')).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />}>
-          <Route index element={<UserMain />}/>
-          <Route path="/admin" element={<Llistat />} />
+          <Route index element={<Llistat />}/>
+          <Route path="/user" element={<UserMain />} />
           <Route path="/curso/:id" element={<Curso />} />
           <Route path="/create" element={<Create />} />
           <Route path="/update/:id" element={<Update />} />
