@@ -4,6 +4,17 @@ import './App.css'
 
 function App() {
 
+  const leftMargin1 = {
+    marginLeft: "10px",
+  }
+  const leftMargin2 = {
+    marginLeft: "0px"
+  }
+  const overrideSize = {
+    width: "38px",
+    height: "38px",
+    marginTop: "-2.1px"
+  }
 
   return (
     <>
@@ -15,11 +26,21 @@ function App() {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="me-auto">
-              <Link to="/create" className='nav-link'>
-                <img className='adjust' src='https://i.imgur.com/kcZP3p5.png'/>
+              <Link to="/create" style={leftMargin1} className='nav-link'>
+                <img className='adjust-mid' src='https://i.imgur.com/kcZP3p5.png'/>
               </Link>
-              <Link to="/user" className='nav-link'>
-              <img className='adjust' src='https://i.imgur.com/pSQOxmw.png'/>
+              <Link to="/user" style={
+                {
+                  ...leftMargin2,
+                  ...overrideSize
+                }
+              } className='nav-link'>
+              <img className='adjust-mid' style={
+                {
+                  ...leftMargin2,
+                  ...overrideSize
+                }
+              } src='https://i.imgur.com/pSQOxmw.png'/>
               
               </Link>
             </Nav>
