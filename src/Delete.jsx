@@ -20,9 +20,6 @@ export default function Delete() {
     }, []);
 
     async function handleDeleteCourse () {
-        console.log(courseId);
-       // if (!courseId) {
-
             const response = await controlador.remove(courseId);
             if (response) { 
                 setCourseId(''); 
