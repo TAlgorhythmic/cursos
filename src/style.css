@@ -366,6 +366,20 @@ div.absolute-end {
     text-align: center;
     justify-content: space-between;
 }
+.edit-button {
+    width: 28px;
+    height: 28px;
+    max-width: 28px;
+    max-height: 28px;
+    background-color: transparent;
+    border: none;
+    background-image: url('https://i.imgur.com/QaqW2ge.png');
+    background-size: cover;
+    background-position: center;
+    cursor: pointer;
+    opacity: 0%;
+    transition: 0.15s;
+}
 .delete-button {
     width: 28px;
     height: 28px;
@@ -373,7 +387,7 @@ div.absolute-end {
     max-height: 28px;
     background-color: transparent;
     border: none;
-    background-image: url("https://cdn.discordapp.com/attachments/1242519476633866313/1259823912473198653/EduWave__1_-removebg-preview.png?ex=668d15f3&is=668bc473&hm=5a26d35f9a2421ff7fe93f1c24ff39386e3e58bbe7c2d671af0ec4818c1e0e02&");
+    background-image: url("https://i.imgur.com/S0wI7Nm.png");
     background-size: cover;
     background-position: center;
     cursor: pointer;
@@ -384,22 +398,9 @@ div.absolute-end {
 .carousel-positioning {
     width: 70%;
     height: 500px;
-    box-shadow: 0px 0px 8px 8px gray;
+    box-shadow: 0px 0px 5px gray;
 }
-.edit-button {
-    width: 28px;
-    height: 28px;
-    max-width: 28px;
-    max-height: 28px;
-    background-color: transparent;
-    border: none;
-    background-image: url('https://cdn.discordapp.com/attachments/1242519476633866313/1259823912951353414/EduWave__2_-removebg-preview.png?ex=668d15f3&is=668bc473&hm=81559ae85b96835fef63f57eae7aef132b3428bbaab9dd397ba91915577bcc16&');
-    background-size: cover;
-    background-position: center;
-    cursor: pointer;
-    opacity: 0%;
-    transition: 0.15s;
-}.card-curso{
+.card-curso{
     width: 790px;
     height: 50%;
     margin:auto;

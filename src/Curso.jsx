@@ -37,9 +37,7 @@ function Curso() {
 
     function getEmbedAsComp() {
         return (
-            <div dangerouslySetInnerHTML={{__html: curso.video}}>
-                
-            </div>
+            <div dangerouslySetInnerHTML={{__html: curso.video}}></div>
         )
     }
 
