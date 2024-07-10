@@ -381,6 +381,11 @@ div.absolute-end {
     margin: 8px;
     transition: 0.15s;
 }
+.carousel-positioning {
+    width: 70%;
+    height: 500px;
+    box-shadow: 0px 0px 8px 8px gray;
+}
 .edit-button {
     width: 28px;
     height: 28px;

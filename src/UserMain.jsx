@@ -33,8 +33,8 @@ export default function UserMain() {
     });
 
     return (
-        <>
-            <Carousel>
+        <div className="flex-column-center">
+            <Carousel className="carousel-positioning">
                 <Carousel.Item>
                     <img src={cursosTemp[0].img} text="Image 1" />
                     <Carousel.Caption>
@@ -59,6 +59,6 @@ export default function UserMain() {
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
-        </>
+        </div>
     )
 }
