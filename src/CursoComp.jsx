@@ -1,6 +1,9 @@
 import { Link } from "react-router-dom";
+import { useState, useEffect } from 'react';
+import controlador from './main.jsx'
 
 export default function CursoComp(props) {
+    const [courseId, setCourseId] = useState('');
     const id = props.id;
     const title = props.title;
     const description = props.description;
@@ -42,6 +45,13 @@ export default function CursoComp(props) {
     }
     const starComps = createComps();
 
+    async function handleDeleteCourse () {
+        const response = await controlador.remove(id);
+        if (response) { 
+            setCourseId(''); 
+}
+}
+
     return (
         <>
             <div className="curso" style={gray ? grayBackground : whiteBackground}>
@@ -54,7 +64,7 @@ export default function CursoComp(props) {
                     <div className="flex-row-center">
                         <div className="button-holder">
                             <img className="adjust-mid" src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fcdn-icons-png.flaticon.com%2F512%2F0%2F859.png&f=1&nofb=1&ipt=506cb86dde23dcd450bc615eaca3db5e7b1a839e64a4a96589ac2d31bb46438f&ipo=images"/>
-                            <button className="delete-button" to={`/update/${id}`}></button>
+                            <button className="delete-button" onClick={handleDeleteCourse}></button>
                             <Link className="edit-button" to={`/update/${id}`}></Link>
                         </div>
                     </div>
