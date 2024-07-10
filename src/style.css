@@ -236,6 +236,19 @@ div.curso:hover {
     height: 30%;
     width: 100%;
 }
+.full-content {
+    width: 100%;
+    height: 500px;
+    color: black;
+}
+.full-content-image {
+    width: 100%;
+    height: 300px;
+    color: black;
+}
+.shadow-text {
+    text-shadow: 0px 0px 6px black;
+}
 .adjust-mid {
     width: 28px;
     height: auto;
@@ -396,7 +409,7 @@ div.absolute-end {
     transition: 0.15s;
 }
 .carousel-positioning {
-    width: 70%;
+    width: 50%;
     height: 500px;
     box-shadow: 0px 0px 5px gray;
 }
