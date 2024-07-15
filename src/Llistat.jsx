@@ -34,7 +34,7 @@ function Llistat() {
     return (
         <>
             <div className="super-container-centered">
-                <div className="fade-in">
+                <div className="fade-in-weird-positioning">
 
                     <div className="cursos-lista">
                         {cursos.map((c) => {

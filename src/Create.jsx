@@ -44,7 +44,7 @@ export default function Create() {
 
     return (
         <>
-            <div className="container-centered">
+            <div className="container-centered fade-in">
                 <p className={isValid ? "valid-style" : "invalid-style"}>{text}</p>
                 <div className="container-centered">
                     <div className="form-box">

@@ -1,10 +1,12 @@
 import { useState } from "react";
 
 export default function CarouselDiv(props) {
-    const img = props.img;
-    const title = props.title;
-    const description = props.description;
-    const price = props.price;
+    const curso = props.curso;
+
+    const img = curso.img;
+    const title = curso.title;
+    const description = curso.description;
+    const price = curso.price;
 
     const [total, setTotal] = useState(0);
 

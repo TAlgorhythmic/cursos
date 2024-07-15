@@ -35,12 +35,12 @@ export default function UserMain() {
 
     return (
         <div className="flex-column-center">
-            <Carousel className="carousel-positioning">
+            <Carousel className="carousel-positioning fade-in">
                 {
                     cursosTemp.map(curso => {
                         return (
                             <Carousel.Item>
-                                <CarouselDiv img={curso.img} title={curso.title} description={curso.description}/>
+                                <CarouselDiv curso={curso}/>
                             </Carousel.Item>
                         )
                     })

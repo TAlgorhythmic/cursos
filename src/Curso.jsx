@@ -43,7 +43,7 @@ function Curso() {
 
     return (
         <>
-            <Row >
+            <Row className="fade-in">
                 <Card className="card-curso"  >
                     <Card.Img className="imagen" variant="top" src={curso.img} />
                     <Card.Body>

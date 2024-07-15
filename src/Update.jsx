@@ -48,7 +48,7 @@ export default function Update() {
     useEffect(() => {
 
         async function fetchCurso() {
-            
+
             const resposta = await controlador.get(id);
             if (resposta) {
                 setCurso(resposta);
@@ -71,40 +71,40 @@ export default function Update() {
     } else {
         return (
             <>
-            <div className="container-centered">
-                <p className={isValid ? "valid-style" : "invalid-style"}>{text}</p>
-                <div className="container-centered">
-                    <div className="form-box">
-                        <div className="field">
-                            <label className="inner-item key" htmlFor="title">Título</label>
-                            <input className="inner-item" id="title" type="text" defaultValue={curso.title}/>
-                        </div>
-                        <div className="field">
-                            <label className="inner-item key" htmlFor="description">Descripción</label>
-                            <input className="inner-item" id="description" type="textarea" defaultValue={curso.description}/>
-                        </div>
-                        <div className="field">
-                            <label className="inner-item key" htmlFor="price">Precio</label>
-                            <input className="inner-item" id="price" type="number" defaultValue={curso.price}/>
-                        </div>
-                        <div className="field">
-                            <label className="inner-item key" htmlFor="img">Imágen (URL)</label>
-                            <input className="inner-item" id="img" type="text" defaultValue={curso.img}/>
-                        </div>
-                        <div className="field">
-                            <label className="inner-item key" htmlFor="rating">Rating</label>
-                            <div className="rating-container">
-                                <input className="inner-item rating-textbox" style={override} id="rating" type="number" defaultValue={curso.rating}/>
-                                <p className="inner-item zero-left-margin">/5</p>
+                <div className="container-centered fade-in">
+                    <p className={isValid ? "valid-style" : "invalid-style"}>{text}</p>
+                    <div className="container-centered">
+                        <div className="form-box">
+                            <div className="field">
+                                <label className="inner-item key" htmlFor="title">Título</label>
+                                <input className="inner-item" id="title" type="text" defaultValue={curso.title} />
                             </div>
-                        </div>
-                        <div className="field">
-                            <button className="clickme-button" onClick={submit}>Update</button>
+                            <div className="field">
+                                <label className="inner-item key" htmlFor="description">Descripción</label>
+                                <input className="inner-item" id="description" type="textarea" defaultValue={curso.description} />
+                            </div>
+                            <div className="field">
+                                <label className="inner-item key" htmlFor="price">Precio</label>
+                                <input className="inner-item" id="price" type="number" defaultValue={curso.price} />
+                            </div>
+                            <div className="field">
+                                <label className="inner-item key" htmlFor="img">Imágen (URL)</label>
+                                <input className="inner-item" id="img" type="text" defaultValue={curso.img} />
+                            </div>
+                            <div className="field">
+                                <label className="inner-item key" htmlFor="rating">Rating</label>
+                                <div className="rating-container">
+                                    <input className="inner-item rating-textbox" style={override} id="rating" type="number" defaultValue={curso.rating} />
+                                    <p className="inner-item zero-left-margin">/5</p>
+                                </div>
+                            </div>
+                            <div className="field">
+                                <button className="clickme-button" onClick={submit}>Update</button>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </>
+            </>
         )
     }
 }

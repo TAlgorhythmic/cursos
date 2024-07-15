@@ -173,6 +173,20 @@ button.clickme-button:hover {
     width: 100%;
 }
 .fade-in {
+    animation: fadein-animation2 0.5s;
+}
+
+@keyframes fadein-animation2 {
+    0% {
+        margin-left: -3%;
+        opacity: 0%;
+    }
+    100% {
+        margin-left: 0%;
+        opacity: 100%;
+    }
+}
+.fade-in-weird-positioning {
     margin-top: 30px;
     opacity: 100%;
     animation: fadein-animation 0.5s;
